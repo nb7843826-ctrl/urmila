@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urmila | My Beautiful World</title>
+<meta name="description" content="Welcome to Urmila's personal website, a beautiful space for photos, memories and stories.">
+<meta name="robots" content="index,follow">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Georgia,serif;background:#fff8f6;color:#392c31}
+header{padding:18px;text-align:center;background:#f3dfe3}
+header h2{margin:0;color:#a44e68;letter-spacing:3px}
+nav{text-align:center;padding:14px;background:white}
+nav a{margin:0 8px;color:#93465d;text-decoration:none;font-size:14px}
+.hero{text-align:center;padding:65px 20px 55px;background:linear-gradient(145deg,#f9e8e9,#fff8f3)}
+.hero .circle{width:135px;height:135px;border-radius:50%;margin:auto;background:#e8bfc9;display:grid;place-items:center;font-size:65px;color:#91445c}
+h1{font-size:48px;font-weight:normal;margin:20px 0 10px}
+h1 span{color:#b65d78;font-style:italic}
+p{line-height:1.8;color:#75636a}
+.btn{display:inline-block;background:#a44e68;color:white;border:0;border-radius:30px;padding:13px 24px;text-decoration:none;cursor:pointer;margin-top:12px}
+section{padding:48px 20px;text-align:center}
+h2{font-weight:normal;font-size:30px}
+.about{background:white}
+.card{max-width:650px;margin:20px auto;padding:25px;background:#fff;border:1px solid #efdce0;border-radius:18px}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:700px;margin:25px auto}
+.photo{height:160px;border-radius:12px;background:linear-gradient(145deg,#e9c8d0,#f8e9df);display:grid;place-items:center;font-size:38px}
+.memories{background:#f8e9e9}
+.musicbox{max-width:500px;margin:20px auto;padding:20px;background:white;border-radius:18px;border:1px solid #efdce0}
+footer{padding:25px;text-align:center;background:#f3dfe3;color:#754b58}
+@media(max-width:480px){h1{font-size:39px}.gallery{grid-template-columns:1fr 1fr}.photo{height:130px}nav a{margin:0 5px;font-size:12px}}
+</style>
+</head>
+<body>
+<header><h2>♡ URMILA ♡</h2></header>
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#gallery">Gallery</a>
+<a href="#memories">Memories</a>
+</nav>
+<main>
+<section class="hero" id="home">
+<div class="circle">U</div>
+<h1>Hello, I'm <span>Urmila</span></h1>
+<p>A little world of beautiful moments, dreams and memories.</p>
+<a class="btn" href="#about">Discover My World ♡</a>
+</section>
+<section class="about" id="about">
+<h2>About Me</h2>
+<div class="card">
+<p>Welcome to my personal website! This is my little corner of the internet, where I can share my favourite photos, special memories and the little things that make life beautiful.</p>
+</div>
+</section>
+<section id="gallery">
+<h2>My Photo Gallery</h2>
+<p>Beautiful moments deserve a special place.</p>
+<div class="gallery">
+<div class="photo">♡</div>
+<div class="photo">✿</div>
+<div class="photo">✧</div>
+</div>
+<p>Sample placeholders — add your own photos later.</p>
+</section>
+<section class="memories" id="memories">
+<h2>Beautiful Memories</h2>
+<div class="card"><h3>Little Things, Big Memories</h3>
+<p>Every new day brings a new story. Keep the memories that make you smile and the dreams that inspire you.</p></div>
+<div class="musicbox">
+<h3>Soft Instrumental Music ♫</h3>
+<p>Music starts only when you press play.</p>
+<audio id="music" loop src="music.mp3"></audio>
+<button class="btn" onclick="toggleMusic()" id="play">▶ Play Music</button>
+<p id="status">Add a licensed music.mp3 file to enable music.</p>
+</div>
+</section>
+<section id="contact">
+<h2>Stay Connected</h2>
+<p>More special moments coming soon.</p>
+</section>
+</main>
+<footer>Made with ♡ for Urmila</footer>
+<script>
+async function toggleMusic(){
+const m=document.getElementById('music');
+const b=document.getElementById('play');
+const s=document.getElementById('status');
+if(m.paused){
+try{await m.play();b.textContent='❚❚ Pause Music';s.textContent='Music is playing ♫'}
+catch(e){s.textContent='Upload a licensed music.mp3 file beside index.html first'}
+}else{m.pause();b.textContent='▶ Play Music';s.textContent='Music paused'}
+}
+</script>
+</body>
+</html>
